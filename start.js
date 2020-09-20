@@ -19,3 +19,5 @@ app.use((err, req, res, next) => {
     res.status(err.statusCode).json(err);
 });
 app.listen(PORT, () => { console.log(`Server listening on port ${PORT}`); });
+// To facilitate launching web browser
+console.log('http://localhost:'+ PORT)
