@@ -60,8 +60,8 @@ class ModelData {
             dbIds.forEach(function (dbId) {
                 viewer.getProperties(dbId, function (props) {
                     props.properties.forEach(function (prop) {
-                        if (!isNaN(prop.displayValue)) return; // let's not categorize properties that store numbers
-
+                        if (!isNaN(prop.displayValue) && prop.displayName!=='4D_Task_ID') return; // let's not categorize properties that store numbers
+                        
                         // some adjustments for revit:
                         prop.displayValue = prop.displayValue.replace('Revit ', ''); // remove this Revit prefix
                         if (prop.displayValue.indexOf('<') == 0) return; // skip categories that start with <

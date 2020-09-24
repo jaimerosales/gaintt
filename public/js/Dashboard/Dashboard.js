@@ -1,3 +1,5 @@
+var charts = {};
+
 $(document).ready(function () {
     $(document).on('DOMNodeInserted', function (e) {
         if ($(e.target).hasClass('orbit-gizmo')) {
@@ -7,7 +9,7 @@ $(document).ready(function () {
                 new BarChart('Material'),
                 new PieChart('Material')
             ])
-            new GanttPanel(NOP_VIEWER, new GanttChart(tasks));
+            charts['Gantt'] = new GanttPanel(NOP_VIEWER, new GanttChart(tasks));
         }
     });
 })

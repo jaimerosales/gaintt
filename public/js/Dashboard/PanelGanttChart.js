@@ -12,7 +12,7 @@ class GanttChart extends DashboardGanttChart {
     drawChart() {
         var _this = this; // need this for the onClick event
 
-        new Gantt('#gantt', _this.tasks, {
+        this.chart = new Gantt('#gantt', _this.tasks, {
             header_height: 30,
             column_width: 30,
             step: 24,
