@@ -32,6 +32,15 @@
   <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
   <!-- this project files -->
   <link href="css/main.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/frappe-gantt.css">
+  <script src="js/Dashboard/Dashboard.js"></script>
+  <script src="js/Dashboard/DashboardPanel.js"></script>
+  <script src="js/Dashboard/PanelBarChart.js"></script>
+  <script src="js/Dashboard/PanelPieChart.js"></script>
+  <script src="js/Dashboard/PanelGanttChart.js"></script>
+  <!--Chart JS  packages-->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" ></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" />
 </head>
 
 <body>
@@ -45,7 +54,7 @@
         <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
       </div>
       <!--logo start-->
-      <a href="index.html" class="logo"><b>G<span>AI</span>NTT</b></a>
+      <a href="index.html" class="logo"><b>G<span>IA</span>NTT</b></a>
       <!--logo end-->
       <div class="top-menu">
         <ul class="nav pull-right top-menu">
@@ -76,6 +85,12 @@
               <span>Forge Viewer</span>
               </a>
           </li>
+          <li>
+            <a href="gantt.html">
+              <i class="fa fa-cloud"></i>
+              <span>Gantt Chart</span>
+              </a>
+          </li>
         </ul>
         <!-- sidebar menu end-->
       </div>
@@ -91,7 +106,7 @@
           <div class="col-lg-12 main-chart">
             <div class="container-fluid fill">
               <div class="row fill">
-                <div class="col-sm-3 fill">
+                <div class="col-sm-2 fill">
                   <div class="panel panel-default fill">
                     <div class="panel-heading" data-toggle="tooltip">
                       Buckets &amp; Objects
@@ -105,8 +120,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-9 fill">
-                  <div id="forgeViewer"></div>
+                <div class="col-sm-10">
+                  <div class="row">
+                    <div id="gantt" ></div>
+                  </div>
+                  <div class="row">
+                    <div id="forgeViewer" ></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -171,5 +191,6 @@
   <script src="js/ForgeTree.js"></script>
   <script src="js/ForgeViewer.js"></script>
   <script src="/js/handleselectionextension.js"></script>
+  <script src="js/frappe-gantt.min.js"></script>
 </body>
 </html>

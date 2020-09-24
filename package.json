@@ -12,6 +12,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "forge-apis": "^0.7.3",
+    "frappe-gantt": "^0.5.0",
     "multer": "^1.4.2"
   }
 }

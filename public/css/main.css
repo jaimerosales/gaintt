@@ -19,7 +19,9 @@ html, body {
   }
   
   #forgeViewer {
+    position: absolute;
     width: 100%;
+    height: calc(75vh - 150px);
   }
   
   .handleSelectionExtensionIcon {
@@ -27,4 +29,20 @@ html, body {
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: center;
-}
+  }
+
+  #dashboard{
+    overflow: auto;
+    height: calc(100vh - 100px);
+  }
+  
+  .transition-width {
+    transition: width 1s ease-in-out;
+  }
+  
+  .dashboardPanel {
+    width: 100%;
+    padding: 3%;
+    display: block;
+  }
+  
